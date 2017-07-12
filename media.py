@@ -18,12 +18,3 @@ class Movie():
         self.storyline = movie_storyline
         self.poster_image_url = movie_poster_image
         self.trailer_youtube_url = movie_trailer_youtube
-
-    def show_poster(self):
-        # Opening image in web browser
-        webbrowser.open_new_tab(self.poster_image_url)
-        # Opening image from system
-        # os.system("menaceIIsociety.jpg")
-
-    def show_trailer(self):
-        webbrowser.open_new_tab(self.trailer_youtube_url)
