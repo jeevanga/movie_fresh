@@ -12,18 +12,18 @@ class Movie():
     # This class provides a way to store movie related information
 
     def __init__(self, movie_title, movie_synopsis, movie_storyline, movie_poster_image, movie_trailer_youtube):
-        # initialize instance of class Movie
+        # Initialize instance of class Movie
         self.title = movie_title
         self.synopsis = movie_synopsis
         self.storyline = movie_storyline
         self.poster_image_url = movie_poster_image
         self.trailer_youtube_url = movie_trailer_youtube
 
-    def show_poster(self):
-        # Opening image in web browser
-        webbrowser.open_new_tab(self.poster_image_url)
-        # Opening image from system
-        # os.system("menaceIIsociety.jpg")
+class Personnel(Movie):
+    # The 'Personnel' class is defined as a child of the Parent 'Movie' class
 
-    def show_trailer(self):
-        webbrowser.open_new_tab(self.trailer_youtube_url)
+    def __init__(self, movie_title, movie_synopsis, movie_storyline, movie_poster_image, movie_trailer_youtube, director_name, actor_names):
+        # Initialize instance of child class 'Personnel'
+        Movie.__init__(self, movie_title, movie_synopsis, movie_storyline, movie_poster_image, movie_trailer_youtube)
+        self.director_name = director_name
+        self.actor_names = actor_names
